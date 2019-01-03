@@ -24,7 +24,7 @@ Globals:
       Role: !Ref CodeDeployRole
 
 Resources:
-  Lambda-1:
+  Lambda1:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: ./go-lambda-1/bin/go-lambda-1
@@ -34,7 +34,7 @@ Resources:
         Fn::GetAtt:
         - LambdaExecutionRole
         - Arn
-  Lambda-2:
+  Lambda2:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: ./go-lambda-2/bin/go-lambda-2
