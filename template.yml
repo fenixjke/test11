@@ -24,21 +24,26 @@ Globals:
       Role: !Ref CodeDeployRole
 
 Resources:
-  GetHelloWorld:
+  Lambda-1:
     Type: AWS::Serverless::Function
     Properties:
+      CodeUri: /go-lambda-1/main
       Handler: main
       Runtime: go1.x
       Role:
         Fn::GetAtt:
         - LambdaExecutionRole
         - Arn
-      Events:
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /
-            Method: get
+  Lambda-2:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: /go-lambda-2/main
+      Handler: main
+      Runtime: go1.x
+      Role:
+        Fn::GetAtt:
+          - LambdaExecutionRole
+          - Arn
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
