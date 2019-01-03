@@ -10,6 +10,6 @@ func main() {
 }
 
 func handler() error {
-	fmt.Println("log from first lambda")
+	fmt.Println("log from first lambda olol")
 	return nil
 }
