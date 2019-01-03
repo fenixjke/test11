@@ -27,7 +27,7 @@ Resources:
   Lambda-1:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: /go-lambda-1/main
+      CodeUri: /go-lambda-1/bin/go-lambda-1
       Handler: main
       Runtime: go1.x
       Role:
@@ -37,7 +37,7 @@ Resources:
   Lambda-2:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: /go-lambda-2/main
+      CodeUri: /go-lambda-2/bin/go-lambda-2
       Handler: main
       Runtime: go1.x
       Role:

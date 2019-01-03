@@ -26,7 +26,7 @@ else
 fi
 go get ./...
 
-go build -o bin/$OUTPUT $PROJECT/main
+go build -o bin/$OUTPUT main/main.go
 
 EXIT_STATUS=$?
 

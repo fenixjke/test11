@@ -10,7 +10,6 @@ SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
 BUILD_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
 
-
 # Derive the project name from the directory
 PROJECT="$(basename $BUILD_DIR)"
 
@@ -26,7 +25,8 @@ else
     OUTPUT="$PROJECT"_test_mac_os
 fi
 go get ./...
-go build -o bin/$OUTPUT $PROJECT/main
+
+go build -o bin/$OUTPUT main/main.go
 
 EXIT_STATUS=$?
 
